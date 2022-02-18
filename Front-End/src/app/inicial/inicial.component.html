@@ -1,0 +1,26 @@
+<div class="divFundo">
+<div class="divPrincipal">
+
+    <h3 style="color: rgb(9, 128, 128)">Colabore com nosso café da manhã!</h3>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Nome:</label>
+      <input [(ngModel)]='cadastroColaborador.nomeColaborador' type="text" class="form-control" id="nome" (click) = "teste()">
+    </div>
+    <div class="form-group mt-3" >
+      <label for="formGroupExampleInput2">CPF (sem ponto ou hífen):</label>
+      <input [(ngModel)]='cadastroColaborador.cpf' type="text" class="form-control" id="cpf" (click) = "teste()" >
+    </div>
+    <div class="form-group mt-3">
+        <label for="formGroupExampleInput">Escolha até 2 opções de comida:</label>
+        <input [(ngModel)]='cadastroColaborador.opcao1'  type="text" class="form-control" id="opcao1" placeholder="Ex: banana, suco, etc..."  (click) = "teste()">
+      </div>
+      <div class="form-group ">
+        
+        <input [(ngModel)]='cadastroColaborador.opcao2' type="text" class="form-control" id="opcao2" placeholder="Ex: banana, suco, etc..." (click) = "teste()">
+
+        <button type="submit" class="button1 mt-3" (click) = 'cadastrar()'>Cadastrar colaborador</button>
+        <button class="button1 mt-3" routerLink='/lista'> Lista de colaboradores</button>
+      </div>
+  
+</div>
+</div>

@@ -1,0 +1,80 @@
+<div class="divFundo">
+
+<div class="container-fluid ">
+
+    <div class="row bg-info">
+        <div class="col-md-12 text-white">
+         
+          <a  class="text-white">
+            <i class="fa fa-angle-double-left"  routerLink= '/inicial'>Voltar</i> 
+    
+        </a>
+
+        <div class="row d-flex justify-content-center mt-5 mb-5 ">
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" id = "nome" placeholder= "Digite um nome que deseja pesquisar "   [(ngModel)] = 'nomeColaborador' (keyup) = 'findColaboradorPorNome()'>
+            </div>
+          </div>
+        </div>
+    
+       
+            
+        <h1 class="fs-54 text-center"> Colaboradores Cadastrados </h1>
+        
+    
+        
+    
+        </div>
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    <div class="container">
+    
+    <div class="row mt-5">
+    <div class="col-md-12">
+        
+    </div>
+    </div>
+    
+    <div class="row mt-3 mb-5 d-flex justify-content-center">
+        <div class="col md-6">
+            
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cpf</th>
+                    <th scope="col">Opcao1</th>
+                    <th scope="col" class="text-right">Opcao2</th>
+                    
+                    
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr *ngFor = 'let lista of listaColaboradores' >
+                    <th>{{lista.nomeColaborador}}</th>
+                    <th>{{lista.cpf}}</th>
+                    <td>{{lista.opcao1}}</td>
+                    <td>{{lista.opcao2}}</td>
+                    <td class="d-flex justify-content-end">
+                      
+                      <button class="btn btn-info mr-3" [routerLink]="['/edit', lista.idColaborador]" routerLinkActive="router-link-active" >Editar</button>
+                      <button class="btn btn-danger" [routerLink]="['/delete', lista.idColaborador]" routerLinkActive="router-link-active" style="margin-left: 30px;" >Apagar</button>
+                    </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+    
+        </div>
+    </div>
+    
+    </div>
+  </div>

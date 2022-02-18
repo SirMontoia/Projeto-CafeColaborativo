@@ -40,6 +40,10 @@ export class EditComponent implements OnInit {
       this.colaborador = resp
       this.router.navigate (['/lista'])
       alert ('colaborador atualizado com sucesso!')
+    }, erro =>{
+      if(erro.status == 400){
+        alert('Há algum erro, digite novamente! Certifique-se que o cpf é valido!')
+      }
     })
   }
 
